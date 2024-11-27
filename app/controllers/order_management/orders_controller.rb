@@ -1,6 +1,6 @@
 module OrderManagement
   class OrdersController < ApplicationController
-    before_action :set_order, only: [:show, :update, :destroy]
+    before_action :set_order, only: [ :show, :update, :destroy ]
 
     def index
       @orders = OrderManagement::Order.all
@@ -38,11 +38,11 @@ module OrderManagement
     def set_order
       @order = OrderManagement::Order.find(params[:id])
     rescue ActiveRecord::RecordNotFound
-      render json: { error: 'Order not found' }, status: :not_found
+      render json: { error: "Order not found" }, status: :not_found
     end
 
     def order_params
-      params.require(:order).permit(:customer_id, :status, :total_amount)
+      params.require(:order).permit(:user_id, :status, :total_amount, :order_place_date, :address_id)
     end
   end
 end

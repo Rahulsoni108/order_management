@@ -1,9 +1,9 @@
 module OrderManagement
   class OrderItem < ApplicationRecord
-    self.table_name = 'order_items'
+    self.table_name = "order_items"
 
     belongs_to :order
-    belongs_to :product
+    belongs_to :product_variant
 
     validates :quantity, numericality: { greater_than_or_equal_to: 1 }
     validates :price, numericality: { greater_than: 0 }

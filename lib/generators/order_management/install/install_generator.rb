@@ -11,14 +11,14 @@ module OrderManagement
         @last_migration_number.to_s
       end
 
-      def create_order_migration
+      def create_migrations
         migration_template "addresses_migration.rb", "db/migrate/create_addresses.rb", migration_version: migration_version
         migration_template "order_migration.rb", "db/migrate/create_orders.rb", migration_version: migration_version
         migration_template "order_items_migration.rb", "db/migrate/create_order_items.rb", migration_version: migration_version
       end
 
       def add_routes
-        route "mount OrderManagement::Engine, at: '/orders'"
+        route "mount OrderManagement::Engine, at: '/'"
       end
 
       def migration_version

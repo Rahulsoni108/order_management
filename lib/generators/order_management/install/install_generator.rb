@@ -17,6 +17,10 @@ module OrderManagement
         migration_template "order_items_migration.rb", "db/migrate/create_order_items.rb", migration_version: migration_version
       end
 
+      def add_routes
+        route "mount OrderManagement::Engine, at: '/orders'"
+      end
+
       def migration_version
         "[#{Rails::VERSION::MAJOR}.#{Rails::VERSION::MINOR}]"
       end

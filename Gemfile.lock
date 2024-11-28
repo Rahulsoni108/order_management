@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/bhavani-thakur/inventory-management
+  revision: bc6a0d7a7cfc76aebf6b4cd1942c4d4fb3a30301
+  specs:
+    inventory_manager (0.1.0)
+      fast_jsonapi
+      rails (>= 7.1.4)
+
 PATH
   remote: .
   specs:
@@ -234,6 +242,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  inventory_manager!
   order_management!
   puma
   rubocop-rails-omakase

@@ -12,8 +12,5 @@ gem "sprockets-rails"
 # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
 gem "rubocop-rails-omakase", require: false
 
-gem 'inventory_manager', git: 'https://github.com/bhavani-thakur/inventory-management'
-
-
 # Start debugger with binding.b [https://github.com/ruby/debug]
 # gem "debug", ">= 1.0.0"
